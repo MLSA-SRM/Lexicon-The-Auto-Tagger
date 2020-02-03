@@ -9,7 +9,7 @@ from nltk.tokenize import word_tokenize
 
 #-----GLOBAL-VARIABLES--------
 # List of relevant tags
-medium_tags_df = pd.read_csv('C:/Users/Powerhouse/Desktop/Project High/Data/medium-tag-list-dataset/medium_tag_1000.csv')
+medium_tags_df = pd.read_csv('project_high\Data\medium-tag-list-dataset\medium_tag_1000.csv')
 tag_list = list(medium_tags_df['Tags'])
 
 
