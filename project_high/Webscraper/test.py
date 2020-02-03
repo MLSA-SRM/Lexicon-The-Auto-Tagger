@@ -78,7 +78,19 @@ def scrapeURL(url):
 
 # testing
 
-medium_tags_df = pd.read_csv('C:/Users/Powerhouse/Desktop/Project High/Data/medium-tag-list-dataset/medium_tag_1000.csv')
-tag_list = list(medium_tags_df['Tags'])
+max_run = 1
+main_db = {'Name': [], 'Url': [], 'Text': [], 'Tags': []}
 
-print(scrapeURL('https://towardsdatascience.com/explainable-deep-learning-in-breast-cancer-prediction-ae36c638d2a4'))
+for i in range(0, max_run):
+    dataIns = scrapeURL('https://towardsdatascience.com/explainable-deep-learning-in-breast-cancer-prediction-ae36c638d2a4')
+    
+    main_db['Name'].append(dataIns['Name'])
+    main_db['Url'].append(dataIns['Url'])
+    main_db['Text'].append(dataIns['Text'])
+    main_db['Tags'].append(dataIns['Tags'])
+
+    main_db_df = pd.DataFrame(data=main_db, index=None)
+    main_db_df.to_csv('article-database.csv', mode='a')
+
+    
+    
