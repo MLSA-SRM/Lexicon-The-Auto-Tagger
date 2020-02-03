@@ -1,12 +1,12 @@
-[INFO  - 2020-02-03T08:22:05.979Z] GhostDriver - Main - running on port 58692
-[INFO  - 2020-02-03T08:22:08.098Z] Session [44a7cfe0-465e-11ea-b25e-7d965aef3fd8] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2020-02-03T08:22:08.098Z] Session [44a7cfe0-465e-11ea-b25e-7d965aef3fd8] - page.customHeaders:  - {}
-[INFO  - 2020-02-03T08:22:08.098Z] Session [44a7cfe0-465e-11ea-b25e-7d965aef3fd8] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2020-02-03T08:22:08.098Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 44a7cfe0-465e-11ea-b25e-7d965aef3fd8
-[ERROR - 2020-02-03T08:22:13.216Z] Session [44a7cfe0-465e-11ea-b25e-7d965aef3fd8] - page.onError - msg: Unhandled promise rejection TypeError: undefined is not a constructor (evaluating '(t=t.replace(/\/@\{([^}]+)\}/g,"/@$1:@.*").replace(/\{([^}]+)\}/g,":$1")).includes("{")')
+[INFO  - 2020-02-03T08:25:24.128Z] GhostDriver - Main - running on port 58947
+[INFO  - 2020-02-03T08:25:26.163Z] Session [bab5fae0-465e-11ea-94be-3be6f1e9ffd5] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2020-02-03T08:25:26.163Z] Session [bab5fae0-465e-11ea-94be-3be6f1e9ffd5] - page.customHeaders:  - {}
+[INFO  - 2020-02-03T08:25:26.163Z] Session [bab5fae0-465e-11ea-94be-3be6f1e9ffd5] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2020-02-03T08:25:26.163Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: bab5fae0-465e-11ea-94be-3be6f1e9ffd5
+[ERROR - 2020-02-03T08:25:30.097Z] Session [bab5fae0-465e-11ea-94be-3be6f1e9ffd5] - page.onError - msg: Unhandled promise rejection TypeError: undefined is not a constructor (evaluating '(t=t.replace(/\/@\{([^}]+)\}/g,"/@$1:@.*").replace(/\{([^}]+)\}/g,":$1")).includes("{")')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-02-03T08:22:13.216Z] Session [44a7cfe0-465e-11ea-b25e-7d965aef3fd8] - page.onError - stack:
+[ERROR - 2020-02-03T08:25:30.097Z] Session [bab5fae0-465e-11ea-94be-3be6f1e9ffd5] - page.onError - stack:
   (anonymous function) (https://cdn-client.medium.com/lite/static/js/vendors~main.a133fb80.chunk.js:17)
 
   phantomjs://platform/console++.js:263 in error

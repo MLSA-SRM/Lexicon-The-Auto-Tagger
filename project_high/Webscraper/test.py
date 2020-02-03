@@ -81,4 +81,4 @@ def scrapeURL(url):
 medium_tags_df = pd.read_csv('C:/Users/Powerhouse/Desktop/Project High/Data/medium-tag-list-dataset/medium_tag_1000.csv')
 tag_list = list(medium_tags_df['Tags'])
 
-print(scrapeURL('https://medium.com/i-math/combinations-permutations-fa7ac680f0ac'))
+print(scrapeURL('https://medium.com/i-math/the-binomial-theorem-explained-6464f41e5268'))
