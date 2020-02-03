@@ -7,7 +7,14 @@ from selenium import webdriver
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
-# Misc Functions
+#-----GLOBAL-VARIABLES--------
+# List of relevant tags
+medium_tags_df = pd.read_csv('C:/Users/Powerhouse/Desktop/Project High/Data/medium-tag-list-dataset/medium_tag_1000.csv')
+tag_list = list(medium_tags_df['Tags'])
+
+
+#-----MISC-FUNCTIONS----------
+# Finding common elements of two lists
 def common_member(a, b):  
     c = [value for value in a if value in b]
     if c != []:
@@ -15,6 +22,7 @@ def common_member(a, b):
     else:
         return 'None'
 
+# Processing text (nltk) for removing stopwords
 def text_processor(text):
     stop_words = set(stopwords.words('english'))
 
@@ -30,39 +38,46 @@ def text_processor(text):
 
     return filtered_sentence
 
-# Getting Pages
+#----SCRAPER------------------
+
+# Scraper function
+def scrapeURL(url):
+    # Getting Pages
+    driver = webdriver.PhantomJS("C:/Users/Powerhouse/Desktop/Project High/Webscraper/dependency/phantomjs-2.1.1-windows/bin/phantomjs.exe")
+    driver.get(url)
+    res = driver.execute_script("return document.documentElement.outerHTML")
+    driver.quit()
+
+    # Parse Page
+    soup = BeautifulSoup(res, 'lxml')
+
+    # Name
+    name = soup.find('h1').getText()
+
+    # Tags
+    li = soup.find('ul')
+    li = li.find_all('li')
+    tags = []
+    for l in li:
+        x = str(l.find('a').getText())
+        if x in tag_list:
+            tags.append(x)
+
+    # Text
+    para = soup.findAll('p')
+    text = ''
+    for p in para:
+        text = text + ' ' + p.getText()
+    text = text_processor(text)
+    
+    # Return each row data
+    eachDict = {'Name': name, 'Url': url, 'Text': text, 'Tags': tags}
+    return eachDict
+
+
+# testing
+
 medium_tags_df = pd.read_csv('C:/Users/Powerhouse/Desktop/Project High/Data/medium-tag-list-dataset/medium_tag_1000.csv')
 tag_list = list(medium_tags_df['Tags'])
 
-url = 'https://towardsdatascience.com/web-scraping-is-now-legal-6bf0e5730a78'
-driver = webdriver.PhantomJS("C:/Users/Powerhouse/Desktop/Project High/Webscraper/dependency/phantomjs-2.1.1-windows/bin/phantomjs.exe")
-
-driver.get(url)
-res = driver.execute_script("return document.documentElement.outerHTML")
-driver.quit()
-
-# Parse Page
-soup = BeautifulSoup(res, 'lxml')
-
-# Name
-name = soup.find('h1').getText()
-print(name)
-
-# Tags
-li = soup.find('ul')
-li = li.find_all('li')
-
-tags = []
-for l in li:
-    x = str(l.find('a').getText())
-    if x in tag_list:
-        tags.append(x)
-
-print(tags)
-
-# Text
-para = soup.findAll('p')
-text = ''
-for p in para:
-    text = text + ' ' + p.getText()
-print(text_processor(text))
+print(scrapeURL('https://medium.com/i-math/combinations-permutations-fa7ac680f0ac'))
