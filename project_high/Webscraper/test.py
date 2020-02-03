@@ -55,13 +55,15 @@ def scrapeURL(url):
     name = soup.find('h1').getText()
 
     # Tags
-    li = soup.find('ul')
-    li = li.find_all('li')
     tags = []
+    _li = soup.findAll('ul')
+    li = []
+    for _l in _li:
+        for l in _l.findAll('li'):
+            li.append(l.getText())
     for l in li:
-        x = str(l.find('a').getText())
-        if x in tag_list:
-            tags.append(x)
+        if l in tag_list:
+            tags.append(l)
 
     # Text
     para = soup.findAll('p')
@@ -73,7 +75,6 @@ def scrapeURL(url):
     # Return each row data
     eachDict = {'Name': name, 'Url': url, 'Text': text, 'Tags': tags}
     return eachDict
-
 
 # testing
 
