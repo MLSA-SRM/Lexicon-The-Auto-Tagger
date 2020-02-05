@@ -53,29 +53,50 @@ def scrapeURL(url):
     # Parse Page
     soup = BeautifulSoup(res, 'lxml')
 
-    # Name
-    name = soup.find('h1').getText()
+    wok = True
+    try:
+        # Name
+        try:
+            name = soup.find('h1').getText()
+        except:
+            name = 'None'
 
-    # Tags
-    tags = []
-    _li = soup.findAll('ul')
-    li = []
-    for _l in _li:
-        for l in _l.findAll('li'):
-            li.append(l.getText())
-    for l in li:
-        if l in tag_list:
-            tags.append(l)
+        # Tags
+        tags = []
+        _li = soup.findAll('ul')
+        li = []
+        for _l in _li:
+            for l in _l.findAll('li'):
+                li.append(l.getText())
+        for l in li:
+            if l in tag_list:
+                tags.append(l)
 
-    # Text
-    para = soup.findAll('p')
-    text = ''
-    for p in para:
-        text = text + ' ' + p.getText()
-    text = text_processor(text)
+        # Text
+        para = soup.findAll('p')
+        text = ''
+        for p in para:
+            text = text + ' ' + p.getText()
+        text = text_processor(text)
+        
+        # Return each row data
+        eachDict = {'Name': name, 'Url': url, 'Text': text, 'Tags': tags}
+    except:
+        wok = False
     
-    # Return each row data
-    eachDict = {'Name': name, 'Url': url, 'Text': text, 'Tags': tags}
-    return eachDict
+    if wok:
+        return eachDict
+    else:
+        return -1
 
-print(scrapeURL('https://medium.com/rubius-inc/why-merchants-are-not-using-cryptocurrency-fb7edc46d1c7')['Name'])
+
+# tot_df = pd.read_csv('project_high/Data/medium-clean/Export-Medium-Data-950.csv')
+# url_list = list(tot_df['Url'])
+
+# done_df = pd.read_csv('article-database.csv')
+# done_url_list = list(done_df.Url)
+
+# this_url_list = list(set(url_list)-set(done_url_list))
+# print(this_url_list)
+
+print(scrapeURL('https://brightthemag.com/national-geographic-apology-too-late-ngendo-mukii-indigenous-taxidermy-animation-577503736beb'))

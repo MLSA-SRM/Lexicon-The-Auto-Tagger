@@ -56,7 +56,10 @@ def scrapeURL(url):
     wok = True
     try:
         # Name
-        name = soup.find('h1').getText()
+        try:
+            name = soup.find('h1').getText()
+        except:
+            name = 'None'
 
         # Tags
         tags = []
