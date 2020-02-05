@@ -78,4 +78,53 @@ def scrapeURL(url):
     eachDict = {'Name': name, 'Url': url, 'Text': text, 'Tags': tags}
     return eachDict
 
-print(scrapeURL('https://medium.com/rubius-inc/why-merchants-are-not-using-cryptocurrency-fb7edc46d1c7')['Name'])
+#-----Iterative-MAIN----------------
+
+# Can run multiple times | Saves after each scrape
+
+# List of URLs to Scrape
+tot_df = pd.read_csv('project_high/Data/medium-clean/Export-Medium-Data-950.csv')
+url_list = list(tot_df['Url'])
+
+# Check if file exists
+try:
+    done_df = pd.read_csv('article-database.csv')
+    done_url_list = list(done_df.Url)
+    isEx = True
+except:
+    isEx = False
+
+# If file exists then check for done URLs
+if(isEx):
+    this_url_list = list(set(url_list)-set(done_url_list))
+else:
+    this_url_list = url_list
+
+this_run = len(this_url_list)
+
+# how many left
+print(this_run)
+
+if this_run >= 1:    
+    for i in range(0, this_run):
+        
+        main_db = {'Name': [], 'Url': [], 'Text': [], 'Tags': []}
+
+        dataIns = scrapeURL(this_url_list[i])
+                
+        main_db['Name'].append(dataIns['Name'])
+        main_db['Url'].append(dataIns['Url'])
+        main_db['Text'].append(dataIns['Text'])
+        main_db['Tags'].append(dataIns['Tags'])
+
+        if(isEx):
+            pd.DataFrame(data=main_db).to_csv('article-database.csv', mode='a', header=False)
+        else:
+            pd.DataFrame(data=main_db).to_csv('article-database.csv')
+            isEx = True
+
+        print(main_db['Name'])
+        print(i)
+else:
+    print('done')
+    time.sleep(2)
