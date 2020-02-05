@@ -53,30 +53,39 @@ def scrapeURL(url):
     # Parse Page
     soup = BeautifulSoup(res, 'lxml')
 
-    # Name
-    name = soup.find('h1').getText()
+    wok = True
+    try:
+        # Name
+        name = soup.find('h1').getText()
 
-    # Tags
-    tags = []
-    _li = soup.findAll('ul')
-    li = []
-    for _l in _li:
-        for l in _l.findAll('li'):
-            li.append(l.getText())
-    for l in li:
-        if l in tag_list:
-            tags.append(l)
+        # Tags
+        tags = []
+        _li = soup.findAll('ul')
+        li = []
+        for _l in _li:
+            for l in _l.findAll('li'):
+                li.append(l.getText())
+        for l in li:
+            if l in tag_list:
+                tags.append(l)
 
-    # Text
-    para = soup.findAll('p')
-    text = ''
-    for p in para:
-        text = text + ' ' + p.getText()
-    text = text_processor(text)
+        # Text
+        para = soup.findAll('p')
+        text = ''
+        for p in para:
+            text = text + ' ' + p.getText()
+        text = text_processor(text)
+        
+        # Return each row data
+        eachDict = {'Name': name, 'Url': url, 'Text': text, 'Tags': tags}
+    except:
+        wok = False
     
-    # Return each row data
-    eachDict = {'Name': name, 'Url': url, 'Text': text, 'Tags': tags}
-    return eachDict
+    if wok:
+        return eachDict
+    else:
+        return -1
+    
 
 #-----Iterative-MAIN----------------
 
@@ -111,20 +120,23 @@ if this_run >= 1:
         main_db = {'Name': [], 'Url': [], 'Text': [], 'Tags': []}
 
         dataIns = scrapeURL(this_url_list[i])
-                
-        main_db['Name'].append(dataIns['Name'])
-        main_db['Url'].append(dataIns['Url'])
-        main_db['Text'].append(dataIns['Text'])
-        main_db['Tags'].append(dataIns['Tags'])
 
-        if(isEx):
-            pd.DataFrame(data=main_db).to_csv('article-database.csv', mode='a', header=False)
+        if dataIns != -1:            
+            main_db['Name'].append(dataIns['Name'])
+            main_db['Url'].append(dataIns['Url'])
+            main_db['Text'].append(dataIns['Text'])
+            main_db['Tags'].append(dataIns['Tags'])
+
+            if(isEx):
+                pd.DataFrame(data=main_db).to_csv('article-database.csv', mode='a', header=False)
+            else:
+                pd.DataFrame(data=main_db).to_csv('article-database.csv')
+                isEx = True
+
+            print(main_db['Name'])
+            print(i)
         else:
-            pd.DataFrame(data=main_db).to_csv('article-database.csv')
-            isEx = True
-
-        print(main_db['Name'])
-        print(i)
+            continue
 else:
     print('done')
     time.sleep(2)
