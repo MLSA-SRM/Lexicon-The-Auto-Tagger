@@ -1,0 +1,22 @@
+img {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	max-width: 300px;
+	max-height: 100px;
+}
+
+.navbar-brand {
+	font-size: 35px;
+}
+
+#navbarResponsive {
+	font-size: 30px;
+	font-style: underline;
+	font-style: bold;
+}
+
+.jumbotron {
+	padding-left: 50px;
+	padding-right: 50px;
+}
