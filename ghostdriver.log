@@ -1,12 +1,8 @@
-[INFO  - 2020-02-05T12:13:45.654Z] GhostDriver - Main - running on port 55184
-[INFO  - 2020-02-05T12:13:47.765Z] Session [f6542e10-4810-11ea-87ce-7d0996c94dde] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2020-02-05T12:13:47.765Z] Session [f6542e10-4810-11ea-87ce-7d0996c94dde] - page.customHeaders:  - {}
-[INFO  - 2020-02-05T12:13:47.765Z] Session [f6542e10-4810-11ea-87ce-7d0996c94dde] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2020-02-05T12:13:47.765Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f6542e10-4810-11ea-87ce-7d0996c94dde
-[ERROR - 2020-02-05T12:13:54.543Z] Session [f6542e10-4810-11ea-87ce-7d0996c94dde] - page.onError - msg: Unhandled promise rejection TypeError: undefined is not a constructor (evaluating '(t=t.replace(/\/@\{([^}]+)\}/g,"/@$1:@.*").replace(/\{([^}]+)\}/g,":$1")).includes("{")')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2020-02-05T12:13:54.543Z] Session [f6542e10-4810-11ea-87ce-7d0996c94dde] - page.onError - stack:
-  (anonymous function) (https://cdn-client.medium.com/lite/static/js/vendors~main.26101d5d.chunk.js:17)
-
-  phantomjs://platform/console++.js:263 in error
+[INFO  - 2020-02-06T12:05:16.168Z] GhostDriver - Main - running on port 61316
+[INFO  - 2020-02-06T12:05:18.321Z] Session [f116f1d0-48d8-11ea-b7ce-21e406eec928] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2020-02-06T12:05:18.321Z] Session [f116f1d0-48d8-11ea-b7ce-21e406eec928] - page.customHeaders:  - {}
+[INFO  - 2020-02-06T12:05:18.321Z] Session [f116f1d0-48d8-11ea-b7ce-21e406eec928] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2020-02-06T12:05:18.321Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f116f1d0-48d8-11ea-b7ce-21e406eec928
+[INFO  - 2020-02-06T12:10:16.177Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2020-02-06T12:15:16.177Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2020-02-06T12:20:16.177Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
