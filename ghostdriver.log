@@ -1,8 +1,1 @@
-[INFO  - 2020-02-06T12:05:16.168Z] GhostDriver - Main - running on port 61316
-[INFO  - 2020-02-06T12:05:18.321Z] Session [f116f1d0-48d8-11ea-b7ce-21e406eec928] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2020-02-06T12:05:18.321Z] Session [f116f1d0-48d8-11ea-b7ce-21e406eec928] - page.customHeaders:  - {}
-[INFO  - 2020-02-06T12:05:18.321Z] Session [f116f1d0-48d8-11ea-b7ce-21e406eec928] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2020-02-06T12:05:18.321Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f116f1d0-48d8-11ea-b7ce-21e406eec928
-[INFO  - 2020-02-06T12:10:16.177Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2020-02-06T12:15:16.177Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2020-02-06T12:20:16.177Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2020-02-07T21:05:59.075Z] GhostDriver - Main - running on port 50187
