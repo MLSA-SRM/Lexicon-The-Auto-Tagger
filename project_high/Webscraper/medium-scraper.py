@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import time
 import bs4
+import string
+
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from nltk.corpus import stopwords
@@ -60,6 +62,7 @@ def scrapeURL(url):
             name = soup.find('h1').getText()
         except:
             name = 'None'
+        # print(name)
 
         # Tags
         tags = []
@@ -77,10 +80,13 @@ def scrapeURL(url):
         text = ''
         for p in para:
             text = text + ' ' + p.getText()
-        text = text_processor(text)
-        
+        # text = text_processor(text)
+
+        claps = []
+
         # Return each row data
         eachDict = {'Name': name, 'Url': url, 'Text': text, 'Tags': tags}
+
     except:
         wok = False
     
@@ -139,6 +145,7 @@ if this_run >= 1:
             print(main_db['Name'])
             print(i)
         else:
+            time.sleep(5)
             continue
 else:
     print('done')
