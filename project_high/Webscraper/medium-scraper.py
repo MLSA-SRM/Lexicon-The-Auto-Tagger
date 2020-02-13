@@ -3,6 +3,7 @@ import numpy as np
 import time
 import bs4
 import string
+import os
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -47,7 +48,7 @@ def text_processor(text):
 # Scraper function
 def scrapeURL(url):
     # Getting Pages
-    driver = webdriver.PhantomJS("C:/Users/Powerhouse/Documents/GitHub/Project-High/project_high/Webscraper/dependency/phantomjs-2.1.1-windows/bin/phantomjs.exe")
+    driver = webdriver.PhantomJS("/dependency/phantomjs-2.1.1-windows/bin/phantomjs.exe")
     driver.get(url)
     res = driver.execute_script("return document.documentElement.outerHTML")
     driver.quit()
