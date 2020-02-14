@@ -13,7 +13,7 @@ from nltk.tokenize import word_tokenize
 #-----GLOBAL-VARIABLES--------
 
 # List of relevant tags
-medium_tags_df = pd.read_csv('project_high/Data/medium-tag-list-dataset/medium_tag_1000.csv')
+medium_tags_df = pd.read_csv('medium_tag_1000.csv')
 tag_list = list(medium_tags_df['Tags'])
 
 
@@ -48,7 +48,8 @@ def text_processor(text):
 # Scraper function
 def scrapeURL(url):
     # Getting Pages
-    driver = webdriver.PhantomJS("/dependency/phantomjs-2.1.1-windows/bin/phantomjs.exe")
+    #driver = webdriver.PhantomJS("/dependency/phantomjs-2.1.1-windows/bin/phantomjs.exe")
+    driver = webdriver.PhantomJS("/dependency/phantomjs-2.1.1-linux-x86_64/bin/phantomjs.exe")
     driver.get(url)
     res = driver.execute_script("return document.documentElement.outerHTML")
     driver.quit()
@@ -102,7 +103,7 @@ def scrapeURL(url):
 # Can run multiple times | Saves after each scrape
 
 # List of URLs to Scrape
-tot_df = pd.read_csv('project_high/Data/medium-clean/Export-Medium-Data-950.csv')
+tot_df = pd.read_csv('Export-Medium-Data-950.csv')
 url_list = list(tot_df['Url'])
 
 # Check if file exists
