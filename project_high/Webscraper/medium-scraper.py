@@ -49,7 +49,7 @@ def text_processor(text):
 def scrapeURL(url):
     # Getting Pages
     #driver = webdriver.PhantomJS("/dependency/phantomjs-2.1.1-windows/bin/phantomjs.exe")
-    driver = webdriver.PhantomJS()
+    driver = webdriver.PhantomJS()#(os.getcwd() + "/dependency/phantomjs-2.1.1-linux-x86_64/bin/phantomjs.exe")
     driver.get(url)
     res = driver.execute_script("return document.documentElement.outerHTML")
     driver.quit()
