@@ -27,3 +27,10 @@ img {
 .card-title {
 	color: grey;
 }
+#default{
+	height: 500px;
+	
+}
+.text_editor{
+	margin-top: 50px;;
+}
