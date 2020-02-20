@@ -79,11 +79,13 @@ def text_return_tags(text):
             tag_list.append(ml_features[model_index])
 
     # suggest extra tags
+    # --Tags in title
+    # --Tags in text freqDist
     
+    # option for extra tags available
 
     # return tags
     return tag_list
 
-#text = test_webscraper_function('https://medium.com/@StephStClaire/11-things-i-wish-i-knew-when-i-started-my-business-3dc264023df5')
-text = " "
+text = test_webscraper_function('https://uxplanet.org/the-psychology-principles-every-ui-ux-designer-needs-to-know-24116fd65778')
 print(text_return_tags(text))
