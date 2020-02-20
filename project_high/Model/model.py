@@ -79,10 +79,11 @@ def text_return_tags(text):
             tag_list.append(ml_features[model_index])
 
     # suggest extra tags
-
+    
 
     # return tags
     return tag_list
 
-text = test_webscraper_function('https://medium.com/the-marketing-playbook/how-to-design-marketing-campaigns-the-importance-of-market-segmentation-71b11e1819c2')
+#text = test_webscraper_function('https://medium.com/@StephStClaire/11-things-i-wish-i-knew-when-i-started-my-business-3dc264023df5')
+text = " "
 print(text_return_tags(text))
