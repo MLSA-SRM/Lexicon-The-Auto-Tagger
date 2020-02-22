@@ -59,7 +59,7 @@ def text_return_tags(text):
 
     # tfidf vectorizer on corpus
     tfidf_vect = TfidfVectorizer(max_df=0.8, max_features=1000)
-    tfidf_global = tfidf_vect.fit_transform(corpora_data['Text'])
+    tfidf_vect.fit_transform(corpora_data['Text'])
     
     # tfidf transform on new text
     text_ft = tfidf_vect.transform([cleaned_text])
@@ -78,7 +78,7 @@ def text_return_tags(text):
         if y_pred == 1:
             tag_list.append(ml_features[model_index])
 
-    # suggest extra tags
+    # suggest extra 
     # --Tags in title
     # --Tags in text freqDist
     
@@ -87,5 +87,5 @@ def text_return_tags(text):
     # return tags
     return tag_list
 
-text = test_webscraper_function('https://uxplanet.org/the-psychology-principles-every-ui-ux-designer-needs-to-know-24116fd65778')
+text = test_webscraper_function('https://medium.com/free-code-camp/i-ranked-all-the-best-data-science-intro-courses-based-on-thousands-of-data-points-db5dc7e3eb8e?source=search_post---------5')
 print(text_return_tags(text))
