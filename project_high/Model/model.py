@@ -7,7 +7,6 @@ import joblib
 import pandas as pd 
 import numpy as np
 
-from scipy.sparse import csr_matrix
 from nltk.corpus import stopwords
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -87,5 +86,5 @@ def text_return_tags(text):
     # return tags
     return tag_list
 
-text = test_webscraper_function('https://medium.com/free-code-camp/i-ranked-all-the-best-data-science-intro-courses-based-on-thousands-of-data-points-db5dc7e3eb8e?source=search_post---------5')
+text = test_webscraper_function('https://medium.com/better-programming/object-oriented-programming-the-trillion-dollar-disaster-92a4b666c7c7')
 print(text_return_tags(text))
