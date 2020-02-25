@@ -33,7 +33,12 @@ def test_webscraper_function(url):
         text = text + ' ' + p.getText()
     # text = text_processor(text)
 
-    return text
+    try:
+            name = soup.find('h1').getText()
+    except:
+        name = 'None'
+
+    return text, name
 
 def clean_text(text):
     text = re.sub("\'", "", text) 
@@ -49,7 +54,7 @@ def clean_text(text):
     return clean_text
 
 
-def text_return_tags(text):
+def text_return_tags(text, title):
     # clean text
     cleaned_text = clean_text(text)
 
@@ -73,18 +78,18 @@ def text_return_tags(text):
     # predict tags
     tag_list = []
     for model_index in range(0, len(ml_features_models)):
+        if ml_features[model_index] in title:
+            tag_list.append(ml_features[model_index])
         y_pred = ml_features_models[model_index].predict(text_ft)
         if y_pred == 1:
             tag_list.append(ml_features[model_index])
 
-    # suggest extra 
-    # --Tags in title
+    # suggest extra
     # --Tags in text freqDist
-    
     # option for extra tags available
 
     # return tags
     return tag_list
 
-text = test_webscraper_function('https://medium.com/better-programming/object-oriented-programming-the-trillion-dollar-disaster-92a4b666c7c7')
-print(text_return_tags(text))
+text, title = test_webscraper_function('https://uxdesign.cc/design-better-forms-96fadca0f49c?source=search_post---------0&gi=3e3c6c457ebd')
+print(text_return_tags(text, title))
