@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 
 from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -45,7 +46,13 @@ def clean_text(text):
     text = re.sub("[^a-zA-Z]"," ",text) 
     text = ' '.join(text.split()) 
     text = text.lower() 
-    
+
+    ps = PorterStemmer()
+    _t = ""
+    for t in text.split():
+        _t += ps.stem(t) + " "
+    text = _t
+
     stop_words = set(stopwords.words('english'))
     no_stopword_text = [w for w in text.split() if not w in stop_words]
     clean_text = ' '.join(no_stopword_text)
@@ -77,19 +84,28 @@ def text_return_tags(text, title):
 
     # predict tags
     tag_list = []
+    ps = PorterStemmer()
+    _t = ""
+    for t in title.split():
+        _t += ps.stem(t) + " "
+    title = _t
     for model_index in range(0, len(ml_features_models)):
         if ml_features[model_index] in title:
-            tag_list.append(ml_features[model_index])
-        y_pred = ml_features_models[model_index].predict(text_ft)
-        if y_pred == 1:
-            tag_list.append(ml_features[model_index])
+            if ml_features[model_index] in title or ps.stem(ml_features[model_index]) in title:
+                continue
+            else:
+                tag_list.append(ml_features[model_index])
+        else:
+            y_pred = ml_features_models[model_index].predict(text_ft)
+            if y_pred == 1:
+                tag_list.append(ml_features[model_index])
 
     # suggest extra
-    # --Tags in text freqDist
-    # option for extra tags available
+    #   --option for extra tags available
+    #   --multiprocessing
 
     # return tags
     return tag_list
 
-text, title = test_webscraper_function('https://uxdesign.cc/design-better-forms-96fadca0f49c?source=search_post---------0&gi=3e3c6c457ebd')
+text, title = test_webscraper_function('https://uxdesign.cc/make-sense-of-rounded-corners-on-buttons-dfc8e13ea7f7')
 print(text_return_tags(text, title))
