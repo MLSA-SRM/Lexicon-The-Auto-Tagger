@@ -1,6 +1,5 @@
 import string
 import os
-import string
 import re
 import joblib
 
@@ -59,7 +58,6 @@ def clean_text(text):
 
     # return text
     return clean_text
-
 
 def text_return_tags(text, title):
     # clean text
