@@ -5,7 +5,7 @@ import corpora_machine as corps
 from nltk.stem import PorterStemmer
 
 # model first train
-import model_train
+#import model_train
 
 # corpora machine
 text_idf = corps.corpora_train()
@@ -16,7 +16,6 @@ ml_features, ml_features_models = mod_i.load_tag_machines()
 ## --TAG1/TAG2/TAG3--
 def text_return_tags(text, title):
     # clean text
-    text = ''
     cleaned_text = corps.clean_text(text)
 
     # new text to features
@@ -44,5 +43,50 @@ def text_return_tags(text, title):
     #   --option for extra tags available
     #   --multiprocessing
 
+    tag_send = ''
+    for t in tag_list:
+        tag_send += t + '/'
+
     # return tags
-    return tag_list
+    return tag_send
+
+def test_webscraper_function(url):
+    import selenium
+    import bs4
+    from bs4 import BeautifulSoup
+    from selenium import webdriver
+
+    # Getting Pages
+    driver = webdriver.Chrome('project_high/Model/chromedriver.exe')
+    driver.get(url)
+    res = driver.execute_script("return document.documentElement.outerHTML")
+    driver.quit()
+
+    # Parse Page
+    soup = BeautifulSoup(res, 'lxml')
+
+    # Text
+    para = soup.findAll('p')
+    text = ''
+    for p in para:
+        text = text + ' ' + p.getText()
+    # text = text_processor(text)
+
+    try:
+            name = soup.find('h1').getText()
+    except:
+        name = 'None'
+
+    return text, name
+
+
+def pred_machine(id):
+    #find article id in article-data.csv
+
+    #predict tags for article
+
+    #send back string of tags
+
+# local testing
+# text, title = test_webscraper_function('https://uxdesign.cc/make-sense-of-rounded-corners-on-buttons-dfc8e13ea7f7')
+# print(text_return_tags(text, title))
