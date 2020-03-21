@@ -86,6 +86,8 @@ def pred_machine(id):
     #predict tags for article
 
     #send back string of tags
+    
+
 
 # local testing
 # text, title = test_webscraper_function('https://uxdesign.cc/make-sense-of-rounded-corners-on-buttons-dfc8e13ea7f7')
