@@ -1,0 +1,36 @@
+img {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	max-width: 300px;
+	max-height: 100px;
+}
+
+.navbar-brand {
+	font-size: 35px;
+}
+
+#navbarResponsive {
+	font-size: 30px;
+	font-style: underline;
+	font-style: bold;
+}
+
+.card {
+	margin: auto;
+	margin-top: 40px;
+}
+
+.button {
+	padding: 20px;
+}
+.card-title {
+	color: grey;
+}
+#default{
+	height: 500px;
+	
+}
+.text_editor{
+	margin-top: 50px;;
+}
