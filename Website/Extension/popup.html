@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High - The Autotagger</title>
+    <style>
+        html,body{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            min-height: 180px;
+            padding: 0;
+            width: 384px;
+        }
+
+        h1{
+            font-family: 'Menlo', monospace;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 0;
+            color: #2f5876;
+
+        }
+
+        img{
+            width: 30px;
+        }
+
+        .modal-header{
+            align-items: center;
+            border-bottom: 0.5px solid #dadada   ;
+        }
+
+        .modal-content{
+            padding: 0 22px;
+        }
+        .logo{
+            padding: 16px;
+        }
+        .logo-icon{
+            vertical-align: text-bottom;
+            margin-right: 12px;
+        }
+        .version{
+            color: #444;
+            font-size: 18px;
+        }
+        input[type="text"]{
+            padding: 3px;
+            margin: 8px;
+            text-align: center;
+            font-size: 18px;
+        }
+        input[type="submit"]{
+            background: black;
+            color: white;
+            border: 0;
+            padding: 10px 35px;
+            display: block;
+            margin: 5px auto;
+        }
+    </style>
+ 
+</head>
+<body>
+    <div class="modal-header">
+        <h1 class="logo">
+            <img src="images/logo-blue.svg" alt="" class="logo-icon"> High - AutoTagger <span class="version">(1.0.0)</span>
+        </h1>
+    </div>
+    <div class="modal-content">
+        <p>Enter Article here to receive generated tags</p>
+        <form action="http://localhost/db1/script.php" method="POST">
+            <input type="text" id="title" name="title" placeholder="Enter Title">
+            <input type="text" id="article" name="article" placeholder="Enter Article here"><br>
+            <input type="submit" id="save" name="submit" value="Submit">
+        </form>
+    </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <!-- <script type= "text/javascript">
+    $(document).ready(function(){
+        $("#save").click(function(){
+            var title = $("#title").val();
+            var article = $("#article").val();
+
+
+            $.ajax({
+                url: "server.php",
+                type: "post",
+                async: "false",
+                data: { 
+                    "done": 1,
+                    "Title": title,
+                    "article": article,
+                },
+                success: function(data){
+                   
+                }
+            });
+        });
+    });
+</script> -->
+    <script>
+        // console.log("Yeah testing on..");
+        // fetch('http://127.0.0.1:5000/').then((response) => {
+        //     return response.json();
+        // }).then((data) => {
+        //     console.log(data);
+        // });
+
+        const data = {'id':'1', 'title':'sometitle', 'article':'somearticle'}
+
+        options = {
+            method: 'POST',
+            header: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }
+        fetch('http://127.0.0.1:5000/RetPost', options)
+
+
+    </script>
+</html>
