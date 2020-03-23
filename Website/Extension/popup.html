@@ -13,7 +13,6 @@
             padding: 0;
             width: 384px;
         }
-
         h1{
             font-family: 'Menlo', monospace;
             font-size: 22px;
@@ -22,16 +21,13 @@
             color: #2f5876;
 
         }
-
         img{
             width: 30px;
         }
-
         .modal-header{
             align-items: center;
             border-bottom: 0.5px solid #dadada   ;
         }
-
         .modal-content{
             padding: 0 22px;
         }
@@ -69,62 +65,15 @@
             <img src="images/logo-blue.svg" alt="" class="logo-icon"> High - AutoTagger <span class="version">(1.0.0)</span>
         </h1>
     </div>
-    <div class="modal-content">
+    <!-- <div class="modal-content">
         <p>Enter Article here to receive generated tags</p>
         <form action="http://localhost/db1/script.php" method="POST">
             <input type="text" id="title" name="title" placeholder="Enter Title">
             <input type="text" id="article" name="article" placeholder="Enter Article here"><br>
             <input type="submit" id="save" name="submit" value="Submit">
         </form>
-    </div>
+    </div> -->
+    <button id='post-test'>post test</button>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  <!-- <script type= "text/javascript">
-    $(document).ready(function(){
-        $("#save").click(function(){
-            var title = $("#title").val();
-            var article = $("#article").val();
-
-
-            $.ajax({
-                url: "server.php",
-                type: "post",
-                async: "false",
-                data: { 
-                    "done": 1,
-                    "Title": title,
-                    "article": article,
-                },
-                success: function(data){
-                   
-                }
-            });
-        });
-    });
-</script> -->
-    <script>
-        // console.log("Yeah testing on..");
-        // fetch('http://127.0.0.1:5000/').then((response) => {
-        //     return response.json();
-        // }).then((data) => {
-        //     console.log(data);
-        // });
-
-        const data = {'id':'1', 'title':'sometitle', 'article':'somearticle'}
-
-        options = {
-            method: 'POST',
-            header: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }
-        fetch('http://127.0.0.1:5000/RetPost', options)
-
-
-    </script>
+    <script src="popup.js"></script>    
 </html>

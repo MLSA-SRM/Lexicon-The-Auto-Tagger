@@ -5,7 +5,7 @@ import corpora_machine as corps
 from nltk.stem import PorterStemmer
 
 # model first train
-#import model_train
+# import model_train
 
 # corpora machine
 text_idf = corps.corpora_train()
@@ -39,16 +39,8 @@ def text_return_tags(text, title):
             if y_pred == 1:
                 tag_list.append(ml_features[model_index])
 
-    # suggest extra
-    #   --option for extra tags available
-    #   --multiprocessing
-
-    tag_send = ''
-    for t in tag_list:
-        tag_send += t + '/'
-
     # return tags
-    return tag_send
+    return tag_list
 
 def test_webscraper_function(url):
     import selenium
@@ -75,20 +67,12 @@ def test_webscraper_function(url):
     try:
             name = soup.find('h1').getText()
     except:
+        
         name = 'None'
 
     return text, name
 
-
-def pred_machine(id):
-    #find article id in article-data.csv
-
-    #predict tags for article
-
-    #send back string of tags
-    
-
-
 # local testing
-# text, title = test_webscraper_function('https://uxdesign.cc/make-sense-of-rounded-corners-on-buttons-dfc8e13ea7f7')
+# text, title = test_webscraper_function('https://blog.crowdfireapp.com/startups-killing-it-on-instagram-and-what-we-can-learn-from-them-bonus-content-strategy-185d3388651d')
+# print(text, title)
 # print(text_return_tags(text, title))

@@ -15,8 +15,8 @@ def load_tag_machines():
     # load features
     ml_features = []
     ml_features_models = []
-    for file in os.scandir(path='project_high/Model/model_pickle_files'):
+    for file in os.scandir(path='C:/Users/Powerhouse/Documents/GitHub/Project-High/project_high/Model/model_pickle_files'):
         ml_features.append(file.name[:-4]) 
-        ml_features_models.append(joblib.load('project_high/Model/model_pickle_files/' + file.name))
+        ml_features_models.append(joblib.load('C:/Users/Powerhouse/Documents/GitHub/Project-High/project_high/Model/model_pickle_files/' + file.name))
 
     return ml_features, ml_features_models
