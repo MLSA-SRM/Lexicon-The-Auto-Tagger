@@ -22,7 +22,7 @@ def debug(text):
         print(text)
 
 debug('Importing Parent Database..')
-art_df = pd.read_csv('C:/Users/Powerhouse/Documents/GitHub/Project-High/article-database.csv')
+art_df = pd.read_csv('article-database.csv')
 model_db = art_df.drop([art_df.columns[0], art_df.columns[2], art_df.columns[5]], axis=1)
 model_db_clean = model_db.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False).reset_index(drop=True)
 
@@ -94,8 +94,8 @@ model_final_data['ID'] = range(0, model_final_data.shape[0])
 
 article_id_db = model_final_data[['Text', 'ID']]
 
-model_final_data.to_csv('project_high/Model/model-data.csv')
-article_id_db.to_csv('project_high/Model/article-data.csv')
+model_final_data.to_csv('model-data.csv')
+article_id_db.to_csv('article-data.csv')
 
 debug('Training Corpora Transform..')
 tfidf_vectorizer = TfidfVectorizer(max_df=0.8, max_features=1000)
@@ -107,7 +107,7 @@ for x in range(0, len(model_final_data.columns)-2):
     lr = LogisticRegression(tol=0.75)
     lr.fit(train_tfidf, model_final_data.iloc[:, x])
 
-    joblib.dump(lr, 'project_high/Model/model_pickle_files/' + str(model_final_data.columns[x]) + '.pkl')
+    joblib.dump(lr, 'model_pickle_files/' + str(model_final_data.columns[x]) + '.pkl')
 
 debug('Birth Database and Model Train Complete..')
 time.sleep(5)

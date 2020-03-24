@@ -1,14 +1,11 @@
 from flask import Flask
 from flask import request, jsonify
 from flask_cors import CORS
+
+import model_pred 
+
 import json
 import sys
-
-#----------------Pre-Run----------------------
-# train tfidf corpora
-# load ml models into program memory
-sys.path.insert(1, 'C:/Users/Powerhouse/Documents/GitHub/Project-High/project_high/Model/')
-import model_pred 
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)

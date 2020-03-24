@@ -30,7 +30,7 @@ def clean_text(text):
 
 def corpora_train():
     # corpus load as model_data.csv
-    corpora_data = pd.read_csv('C:/Users/Powerhouse/Documents/GitHub/Project-High/project_high/Model/model-data.csv')
+    corpora_data = pd.read_csv('model-data.csv')
 
     # tfidf vectorizer on corpus
     tfidf_vect = TfidfVectorizer(max_df=0.8, max_features=1000)

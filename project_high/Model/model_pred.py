@@ -42,35 +42,35 @@ def text_return_tags(text, title):
     # return tags
     return tag_list
 
-def test_webscraper_function(url):
-    import selenium
-    import bs4
-    from bs4 import BeautifulSoup
-    from selenium import webdriver
+# def test_webscraper_function(url):
+#     import selenium
+#     import bs4
+#     from bs4 import BeautifulSoup
+#     from selenium import webdriver
 
-    # Getting Pages
-    driver = webdriver.Chrome('project_high/Model/chromedriver.exe')
-    driver.get(url)
-    res = driver.execute_script("return document.documentElement.outerHTML")
-    driver.quit()
+#     # Getting Pages
+#     driver = webdriver.Chrome('project_high/Model/chromedriver.exe')
+#     driver.get(url)
+#     res = driver.execute_script("return document.documentElement.outerHTML")
+#     driver.quit()
 
-    # Parse Page
-    soup = BeautifulSoup(res, 'lxml')
+#     # Parse Page
+#     soup = BeautifulSoup(res, 'lxml')
 
-    # Text
-    para = soup.findAll('p')
-    text = ''
-    for p in para:
-        text = text + ' ' + p.getText()
-    # text = text_processor(text)
+#     # Text
+#     para = soup.findAll('p')
+#     text = ''
+#     for p in para:
+#         text = text + ' ' + p.getText()
+#     # text = text_processor(text)
 
-    try:
-            name = soup.find('h1').getText()
-    except:
+#     try:
+#             name = soup.find('h1').getText()
+#     except:
         
-        name = 'None'
+#         name = 'None'
 
-    return text, name
+#     return text, name
 
 # local testing
 # text, title = test_webscraper_function('https://blog.crowdfireapp.com/startups-killing-it-on-instagram-and-what-we-can-learn-from-them-bonus-content-strategy-185d3388651d')
