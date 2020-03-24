@@ -22,7 +22,8 @@
 
         }
         img{
-            width: 30px;
+            width: 50px;
+            height: 50px;
         }
         .modal-header{
             align-items: center;
@@ -33,21 +34,18 @@
         }
         .logo{
             padding: 16px;
+            text-align: center;
         }
         .logo-icon{
             vertical-align: text-bottom;
-            margin-right: 12px;
+            
+            text-align: center;
         }
         .version{
             color: #444;
             font-size: 18px;
         }
-        input[type="text"]{
-            padding: 3px;
-            margin: 8px;
-            text-align: center;
-            font-size: 18px;
-        }
+        
         input[type="submit"]{
             background: black;
             color: white;
@@ -56,24 +54,49 @@
             display: block;
             margin: 5px auto;
         }
+        .post-test{
+            background:#00ABFF;
+            color: white;
+            border: 0;
+            padding: 10px 35px;
+            border-radius: 8px;
+            font-size: large;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform .2s;
+            
+        }
+        .post-test:hover{
+            transform: scale(1.2);
+        }
+        .btn{
+            text-align: center;
+            margin: 30px;  
+        }
+        .tags{
+            text-align: center;
+            color: #707070;
+            display: none;
+            transition: transform .2s;
+        }
     </style>
  
 </head>
 <body>
-    <div class="modal-header">
+    <div class="modal-header"> 
+        <div class="logo-icon" >
+            <img src="images/logo-blue.svg" alt="">
+        </div>
         <h1 class="logo">
-            <img src="images/logo-blue.svg" alt="" class="logo-icon"> High - AutoTagger <span class="version">(1.0.0)</span>
+            High - AutoTagger <span class="version">(1.0.0)</span>
         </h1>
     </div>
-    <!-- <div class="modal-content">
-        <p>Enter Article here to receive generated tags</p>
-        <form action="http://localhost/db1/script.php" method="POST">
-            <input type="text" id="title" name="title" placeholder="Enter Title">
-            <input type="text" id="article" name="article" placeholder="Enter Article here"><br>
-            <input type="submit" id="save" name="submit" value="Submit">
-        </form>
-    </div> -->
-    <button id='post-test'>post test</button>
+    <div class="btn">
+        <button id='post-test' class="post-test">START</button>
+    </div>
+    <div class="tags" id="tag">
+        <h3>Recommended Tags</h3>
+    </div>
+    
 </body>
     <script src="popup.js"></script>    
 </html>
