@@ -1,16 +1,20 @@
 function sendDataFromTab() {
-    var titleData = document.getElementsByTagName('h3')[0]
-    var articleData = document.getElementsByTagName('p')[0]
+    var titleData = document.getElementsByTagName('h3')[0];
+    var nodes = document.querySelectorAll("p");
+    var str1 = "";
+      nodes.forEach((node)=>{
+        str1 = str1 + node.innerText;
+    });
     options = {
         method: 'POST',
         header: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'title':titleData.innerText, 'article':articleData.innerText})
+        body: JSON.stringify({'title':titleData.innerText, 'article':str1})
     }
 
-    fetch('http://127.0.0.1:5000/extToModel', options)
+    fetch('https://projecthigh.herokuapp.com/extToModel', options)
     .then(response => response.json())
     .then(data => {chrome.runtime.sendMessage(data)})
 }
