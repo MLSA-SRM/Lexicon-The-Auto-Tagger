@@ -10,8 +10,9 @@
             font-size: 14px;
             margin: 0;
             min-height: 180px;
-            padding: 0;
+            padding-bottom: 10px;
             width: 384px;
+            overflow: hidden;
         }
         h1{
             font-family: 'Menlo', monospace;
@@ -26,8 +27,8 @@
             height: 50px;
         }
         .modal-header{
+            padding-top: 20px;
             align-items: center;
-            border-bottom: 0.5px solid #dadada   ;
         }
         .modal-content{
             padding: 0 22px;
@@ -38,7 +39,6 @@
         }
         .logo-icon{
             vertical-align: text-bottom;
-            
             text-align: center;
         }
         .version{
@@ -59,24 +59,30 @@
             color: white;
             border: 0;
             padding: 10px 35px;
-            border-radius: 8px;
+            border-radius: 5px;
             font-size: large;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-            transition: transform .2s;
-            
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+            transition: transform .1s;         
         }
         .post-test:hover{
-            transform: scale(1.2);
+            transform: scale(1.035);
+        }
+        .post-test:active{
+            transform: scale(0.965);
+        }
+        .post-test:focus{
+            outline: none;
         }
         .btn{
             text-align: center;
-            margin: 30px;  
+            margin: 30px;
+            user-select: none;
         }
         .taghead{
             text-align: center;
             color: #707070;
             display: none;
-            transition: transform .2s;
+            transition: transform .1s;
         }
         .tagStyle{
             float: left;
@@ -85,19 +91,19 @@
             background-color: #EBEBEB;
             font-size: medium;
             padding: 15px;
-            border-radius: 15px;
+            border-radius: 7.5px;
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-            transition: transform .2s;
-           border: none;
+            transition: transform .1s;
+            border: none;
         }
-
         .tagStyle:hover{
             transform: scale(1.1); 
         }
+
         #incTags{
             padding: 20px;
         }
-        
+  
     </style>
  
 </head>
@@ -106,17 +112,15 @@
         <div class="logo-icon" >
             <img src="images/logo-blue.svg" alt="">
         </div>
-        <h1 class="logo">
-            High - AutoTagger <span class="version">(1.0.0)</span>
-        </h1>
     </div>
     <div class="btn">
-        <button id='post-test' class="post-test">START</button>
+        <button id='post-test' class="post-test">Start</button>
     </div>
     <div class="taghead" id="tag">
         <h3>Recommended Tags</h3>  
-        <div id="incTags">     
+        <div id="incTags">
         </div>
+        <a href="#" data-title="Awesome Button"></a>
     </div>
     
 </body>
