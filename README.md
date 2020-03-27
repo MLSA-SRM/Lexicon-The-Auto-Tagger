@@ -28,9 +28,9 @@ This is for blog writers who want to focus on their content and skip the worry a
  <li>Enable Developer Mode in your browser (see Support for tested Browsers)
   <ul>
    <li>chrome://extensions for Google Chrome</li>
-   <li>edge://extensions for Chromium Edge 
+   <li>edge://extensions for Chromium Edge</li>
 
-   ![](https://i.ibb.co/KGb8D1w/dev-mode.png)</li>
+ ![](https://i.ibb.co/KGb8D1w/dev-mode.png)
   </ul>
   </li>
   </ul>
@@ -50,6 +50,6 @@ This is for blog writers who want to focus on their content and skip the worry a
 <ul>
 <li>On the editor page of your chosen blog site (see Support for tested blog sites)</li> 
 <li>Click on the extension's launcher on the toolbar of your browser.</li>
-<li> click on Start.</li>
+<li>Click on Start.</li>
 </ul>
 
