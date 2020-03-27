@@ -185,7 +185,7 @@ def get_urls_from_cards(cards):
 
 
 def scrape_tag(tag, yearstart, monthstart, yearstop, monthstop):
-    ------------------------
+   
     path = os.getcwd()
     path = path + "/TAG_SCRAPES/medium_"+tag+".csv"
     #3. TRY TO OPEN FILE PATH
@@ -202,7 +202,7 @@ def scrape_tag(tag, yearstart, monthstart, yearstop, monthstop):
         raise Exception("End date exceeds start date.")
     else:
         None
--------------------------------------------------------------
+#
     #SCRAPING
 
     
