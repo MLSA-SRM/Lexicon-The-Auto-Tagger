@@ -19,7 +19,8 @@ This is for blog writers who want to focus on their content and skip the worry a
  </ul>
 </li>
 <ul>
- ---
+
+---
 ### Installing the Extension:
 <ul>
  <li>Currently in development, installation requires extension to be loaded in developer mode</li>
