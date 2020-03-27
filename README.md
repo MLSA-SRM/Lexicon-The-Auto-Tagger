@@ -8,13 +8,16 @@ This is for blog writers who want to focus on their content and skip the worry a
 ### Support:
 <ul>
 <li>Browsers Tested
-<ul>
-<li>Google Chrome Browser (Tested on 80.0.3987.149)</li>
-<li>Microsoft Chromium Edge (Tested on Beta-81.0.416.34)</li>
-</ul>
+ <ul>
+  <li>Google Chrome Browser (Tested on 80.0.3987.149)</li>
+  <li>Microsoft Chromium Edge (Tested on Beta-81.0.416.34)</li>
+ </ul>
+</li>
 <li>Sites Tested
-<ul>
-<li>Medium.com
+ <ul>
+  <li>Medium.com</li>
+ </ul>
+</li>
 
 ### Installing the Extension
 <ul>
