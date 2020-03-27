@@ -18,7 +18,7 @@ This is for blog writers who want to focus on their content and skip the worry a
   <li>Medium.com</li>
  </ul>
 </li>
-<ul>
+</ul>
 
 ---
 ### Installing the Extension:
