@@ -1,7 +1,11 @@
 const tagHead = document.getElementById("tag");
+const loader = document.getElementById("loader");
 
 function Disapp(){
     tagHead.style.display = "block"
+}
+function loaderDispl(){
+    loader.style.display = "block"
 }
 function postTest() {   
     var result;
@@ -12,6 +16,7 @@ function postTest() {
         result = msg.tags;
         
         function appendData(data){
+
             var mainContainer = document.getElementById("incTags");
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("button");
@@ -20,6 +25,7 @@ function postTest() {
                 mainContainer.appendChild(div);
               }
             }
+            loader.style.display = "none";
         appendData(result);
     });
     
