@@ -30,11 +30,9 @@ This is for blog writers who want to focus on their content and skip the worry a
    <li>chrome://extensions for Google Chrome</li>
    <li>edge://extensions for Chromium Edge</li>
   </ul>
+ </li>
  
  ![](https://i.ibb.co/KGb8D1w/dev-mode.png)
-
-  </li>
-  </ul>
  <li>Use "Load Unpacked" and select folder "~/Project-High/Extension/Extension".
  
  ![](https://i.ibb.co/sRDYTQC/load-unpacked.png)
