@@ -43,7 +43,7 @@ This is for blog writers who want to focus on their content and skip the worry a
 
  ![](https://i.ibb.co/ZJGg43M/confirmation.png)
  </li>
-
+</ul>
 
 ### Usage
 <ul>
