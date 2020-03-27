@@ -18,34 +18,31 @@ This is for blog writers who want to focus on their content and skip the worry a
   <li>Medium.com</li>
  </ul>
 </li>
-
-### Installing the Extension
 <ul>
-<li>Currently in development, installation requires extension to be loaded in developer mode</li>
-<li>Clone this repository to your local machine using or simple download.
-</li>
-<li>Enable Developer Mode in your browser (see Support for tested Browsers)
+ ---
+### Installing the Extension:
 <ul>
-<li>chrome://extensions for Google Chrome</li>
-<li>
-edge://extensions for Chromium Edge 
+ <li>Currently in development, installation requires extension to be loaded in developer mode</li>
+ <li>Clone this repository to your local machine using or simple download.</li>
+ <li>Enable Developer Mode in your browser (see Support for tested Browsers)
+  <ul>
+   <li>chrome://extensions for Google Chrome</li>
+   <li>edge://extensions for Chromium Edge 
 
-![](https://i.ibb.co/KGb8D1w/dev-mode.png)</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>Use "Load Unpacked" and select folder <br>~/Project-High/Extension/Extension
+   ![](https://i.ibb.co/KGb8D1w/dev-mode.png)</li>
+  </ul>
+  </li>
+  </ul>
+ <li>Use "Load Unpacked" and select folder <br>~/Project-High/Extension/Extension
+ 
+ ![](https://i.ibb.co/sRDYTQC/load-unpacked.png)
 
-![](https://i.ibb.co/sRDYTQC/load-unpacked.png)
+ ![](https://i.ibb.co/5cDb5Tq/load-unpacked-file-select.png)
+ </li>
+ <li>Finally you should have successfully added our extension.
 
-![](https://i.ibb.co/5cDb5Tq/load-unpacked-file-select.png)
-</li>
-<ul>
-<li>Finally you should have successfully added our extension.
-
-![](https://i.ibb.co/ZJGg43M/confirmation.png)
-</li>
+ ![](https://i.ibb.co/ZJGg43M/confirmation.png)
+ </li>
 
 
 ### Usage
