@@ -1,4 +1,4 @@
-# Lexicon
+# ![](https://i.ibb.co/KGb8D1w/dev-mode.png) Lexicon
 
 Lexicon is a browser extension for automatically generating tags for your online blog, article or post.
 
@@ -52,3 +52,5 @@ This is for blog writers who want to focus on their content and skip the worry a
 <li>Click on Start.</li>
 </ul>
 
+---
+### Technical: 
