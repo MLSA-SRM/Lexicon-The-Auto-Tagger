@@ -1,10 +1,11 @@
-# <img src=https://i.ibb.co/J7vRWpf/logo-2.png> Lexicon
+# Lexicon <img src=https://i.ibb.co/J7vRWpf/logo-2.png width=175 align='right'>
 
+<p>
 Lexicon is a browser extension for automatically generating tags for your online blog, article or post.
 
 This is for blog writers who want to focus on their content and skip the worry about what tags they have to brand their articles with.
-
- ---
+</p>
+---
 ### Support:
 <ul>
 <li>Browsers Tested
