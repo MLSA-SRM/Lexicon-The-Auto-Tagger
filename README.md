@@ -61,4 +61,4 @@ Clone this repository to your local machine using or simple download.
 </ul>
 
 ---
-***For further reading, please see <a href=https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger/wiki'>Wiki</a>.
+***For further reading, please see <a href='https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger/wiki'>Wiki</a>.***
