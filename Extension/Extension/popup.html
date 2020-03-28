@@ -3,44 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High - The Autotagger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Lexicon</title>
     <style>
         html,body{
-            font-family: 'Open Sans', sans-serif;
-            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             min-height: 180px;
             padding-bottom: 10px;
             width: 384px;
-            overflow: hidden;  
-        }
-      
-        
-        img{
-            width: 50px;
-            height: 50px;
-        }
-        .modal-header{
-                text-align: center;
-                margin-top: 10px;
-        }
-        .modal-content{
-            padding: 0 22px;
-        }
+            overflow: hidden; 
+        }        
         .logo{
             padding: 16px;
             text-align: center;
         }
         .logo-icon{
-           margin-left: 23%;
             display: flex;
-            align-items: center;
+            /* background-color: antiquewhite; */
+            margin-top: 7.5%;
+            margin-left: 5%;
+            margin-right: 5%;
         }
-        .version{
-            color: #444;
-            font-size: 18px;
-        }
-        
         input[type="submit"]{
             background: black;
             color: white;
@@ -52,11 +36,13 @@
         .post-test{
             background: #F79552;
             color: white;
+            font-weight: light;
+            font-size: 40px;
+            width: 150px;
             border: 0;
             padding: 10px 35px;
-            border-radius: 5px;
-            font-size: large;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.35);
             transition: transform .1s;         
         }
         .post-test:hover{
@@ -69,6 +55,7 @@
             outline: none;
         }
         .btn{
+            /* background-color: salmon; */
             text-align: center;
             margin: 30px;
             user-select: none;
@@ -78,6 +65,10 @@
             color: #707070;
             display: none;
             transition: transform .1s;
+        }
+        .recTagHead{
+            transform: scale(0.87, 1);
+            margin-bottom: 30px;
         }
         .tagStyle{
             float: left;
@@ -96,56 +87,71 @@
         }
 
         #incTags{
+            align-items: center;
             padding: 20px;
         }
         .loader {
-        border: 16px solid #f3f3f3; /* Light grey */
-        border-top: 16px solid #F79552; /* orange*/
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        animation: spin 2s linear infinite;
-        margin-left: 135px;
+            border: 5px solid #f3f3f3; /* Light grey */
+            border-top: 5px solid #F79552; /* orange*/
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            animation: spin 2s linear infinite;
+            margin-left: 150px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-    .lex{
-       font-weight: 1000;
-       color: #5A5B5D;
-       letter-spacing: 4px;
-       font-size: large;
-    }
-    .subtitle{
-        font-weight: 100;
-        letter-spacing: 1px;
-        font-size:medium;
-    }
- 
+        .lex{
+            /* background-color: aqua; */
+            font-weight: bold;
+            color: #5A5B5D;
+            letter-spacing: 0px;
+            font-size: 50px;
+        }
+        .subtitle{
+            /* background-color: rgb(255, 217, 0); */
+            color: #5A5B5D;
+            letter-spacing: 0px;
+            font-weight: 400;
+            font-size: 27.5px;
+            line-height: 10px;
+        }
+        .icon{
+            /* background-color: rgb(255, 60, 0); */
+            width: 125px;
+            height:  125px;
+        }
   
     </style>
- 
 </head>
 <body>
-    <div class="modal-header"> 
-        <div class="logo-icon" >
-            <img src="logo-2.png" class="icon"alt="">
-            <span class="lex">&nbsp; LEXICON </br>&nbsp; <span class="subtitle">The Auto tagger</span></span>  
+    <div class="logo-icon" >
+        <div>
+            <img src="logo-2.png" class="icon" alt="">
         </div>
+        <div style='margin-top: 17.5px; transform: scale(0.88, 1);'>
+            <!-- <p style= "transform: scale(0.85, 1); margin-top: 10%; margin-left: 0%;"> -->
+            <span class="lex">LEXICON</span>
+            <span class="subtitle">The Auto Tagger</span>
+            <!-- </p> -->
+        </div>  
     </div>
+
     <div class="btn">
-        <button id='post-test' class="post-test">TAG!</button>
+        <button id='post-test' class="post-test">Tag</button>
     </div>
+
     <div class="taghead" id="tag">
-        <h3>Recommended Tags</h3> 
-        <div class="loader" id="loader"></div> 
-        <div id="incTags">
+        <div class='recTagHead'>
+            <span style='font-size: 25px;'>Recommended Tags</span> 
         </div>
-        <a href="#" data-title="Aweso   me Button"></a>
+        <div class="loader" id="loader"></div> 
+        <div id="incTags"></div>
     </div>
-    
+
 </body>
     <script src="popup.js"></script> 
 </html>
