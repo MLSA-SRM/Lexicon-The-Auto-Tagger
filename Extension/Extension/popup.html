@@ -12,23 +12,17 @@
             min-height: 180px;
             padding-bottom: 10px;
             width: 384px;
-            overflow: hidden;
+            overflow: hidden;  
         }
-        h1{
-            font-family: 'Menlo', monospace;
-            font-size: 22px;
-            font-weight: 400;
-            margin: 0;
-            color: #2f5876;
-
-        }
+      
+        
         img{
             width: 50px;
             height: 50px;
         }
         .modal-header{
-            padding-top: 20px;
-            align-items: center;
+                text-align: center;
+                margin-top: 10px;
         }
         .modal-content{
             padding: 0 22px;
@@ -38,8 +32,9 @@
             text-align: center;
         }
         .logo-icon{
-            vertical-align: text-bottom;
-            text-align: center;
+           margin-left: 23%;
+            display: flex;
+            align-items: center;
         }
         .version{
             color: #444;
@@ -55,7 +50,7 @@
             margin: 5px auto;
         }
         .post-test{
-            background:#00ABFF;
+            background: #F79552;
             color: white;
             border: 0;
             padding: 10px 35px;
@@ -105,19 +100,30 @@
         }
         .loader {
         border: 16px solid #f3f3f3; /* Light grey */
-        border-top: 16px solid #3498db; /* Blue */
+        border-top: 16px solid #F79552; /* orange*/
         border-radius: 50%;
         width: 80px;
         height: 80px;
         animation: spin 2s linear infinite;
-        margin-left: 120px;
-
+        margin-left: 135px;
         }
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+    .lex{
+       font-weight: 1000;
+       color: #5A5B5D;
+       letter-spacing: 4px;
+       font-size: large;
+    }
+    .subtitle{
+        font-weight: 100;
+        letter-spacing: 1px;
+        font-size:medium;
+    }
+ 
   
     </style>
  
@@ -125,11 +131,12 @@
 <body>
     <div class="modal-header"> 
         <div class="logo-icon" >
-            <img src="images/logo-blue.svg" alt="">
+            <img src="logo-2.png" class="icon"alt="">
+            <span class="lex">&nbsp; LEXICON </br>&nbsp; <span class="subtitle">The Auto tagger</span></span>  
         </div>
     </div>
     <div class="btn">
-        <button id='post-test' class="post-test">Start</button>
+        <button id='post-test' class="post-test">TAG!</button>
     </div>
     <div class="taghead" id="tag">
         <h3>Recommended Tags</h3> 
