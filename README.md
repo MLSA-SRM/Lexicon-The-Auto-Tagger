@@ -5,6 +5,7 @@ Lexicon is a browser extension for automatically generating tags for your online
 
 This is for blog writers who want to focus on their content and skip the worry about what tags they have to brand their articles with.
 </p>
+
 ---
 ### Support:
 <ul>
