@@ -1,5 +1,4 @@
-![](https://i.ibb.co/J7vRWpf/logo-2.png)
-# Lexicon
+# <img src=https://i.ibb.co/J7vRWpf/logo-2.png> Lexicon
 
 Lexicon is a browser extension for automatically generating tags for your online blog, article or post.
 
