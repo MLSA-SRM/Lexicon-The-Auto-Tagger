@@ -59,3 +59,6 @@ Clone this repository to your local machine using or simple download.
 <li>Click on the extension's launcher on the toolbar of your browser.</li><br>
 <li>Click on Start.</li>
 </ul>
+
+---
+***For further reading, please see <a href=https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger/wiki'>Wiki</a>.
