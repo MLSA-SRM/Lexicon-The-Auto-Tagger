@@ -5,7 +5,6 @@ Lexicon is a browser extension for automatically generating tags for your online
 
 This is for blog writers who want to focus on their content and skip the worry about what tags they have to brand their articles with.
 </p>
-
 ---
 ### Support:
 <ul>
@@ -24,13 +23,18 @@ This is for blog writers who want to focus on their content and skip the worry a
 
 ---
 ### Installing the Extension:
+***Currently in development, installation requires extension to be loaded in developer mode***
+
+Clone this repository to your local machine using or simple download.
+
+	git clone https://https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger
+
+<br>
 <ul>
- <li>Currently in development, installation requires extension to be loaded in developer mode</li>
- <li>Clone this repository to your local machine using or simple download.</li>
  <li>Enable Developer Mode in your browser (see Support for tested Browsers)
-  <ul>
+  <ul><br>
    <li>chrome://extensions for Google Chrome</li>
-   <li>edge://extensions for Chromium Edge</li>
+   <li>edge://extensions for Chromium Edge</li><br>
   </ul>
  </li>
  
@@ -47,12 +51,10 @@ This is for blog writers who want to focus on their content and skip the worry a
  </li>
 </ul>
 
+---
 ### Usage
 <ul>
-<li>On the editor page of your chosen blog site (see Support for tested blog sites)</li> 
-<li>Click on the extension's launcher on the toolbar of your browser.</li>
+<li>On the editor page of your chosen blog site (see Support for tested blog sites)</li><br>
+<li>Click on the extension's launcher on the toolbar of your browser.</li><br>
 <li>Click on Start.</li>
 </ul>
-
----
-### Technical: 
