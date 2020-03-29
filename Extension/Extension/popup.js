@@ -1,5 +1,6 @@
 const tagHead = document.getElementById("tag");
 const loader = document.getElementById("loader");
+const btn = document.getElementById("btn");
 
 function Disapp(){
     tagHead.style.display = "block"
@@ -7,7 +8,8 @@ function Disapp(){
 function loaderDispl(){
     loader.style.display = "block"
 }
-function postTest() {   
+function postTest() {
+    btn.style.display = "none";
     var result;
     chrome.tabs.executeScript({
         file: 'testRun.js'
