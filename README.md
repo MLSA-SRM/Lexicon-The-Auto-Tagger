@@ -57,7 +57,7 @@ Clone this repository to your local machine using or simple download.
 <ul>
 <li>On the editor page of your chosen blog site (see Support for tested blog sites)</li><br>
 <li>Click on the extension's launcher on the toolbar of your browser.</li><br>
-<li>Click on Start.</li>
+<li>Click on Tag.</li>
 </ul>
 
 ---
