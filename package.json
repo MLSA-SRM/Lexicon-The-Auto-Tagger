@@ -1,0 +1,27 @@
+{
+  "name": "Project-High",
+  "version": "1.0.0",
+  "description": "<p>\r Lexicon is a browser extension for automatically generating tags for your online blog, article or post.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger/issues"
+  },
+  "homepage": "https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "dom-parser": "^0.1.6",
+    "jsdom": "^16.2.2",
+    "puppeteer": "^2.1.1"
+  }
+}
