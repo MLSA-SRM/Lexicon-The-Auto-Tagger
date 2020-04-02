@@ -1,4 +1,4 @@
-# Lexicon <img src=https://i.ibb.co/J7vRWpf/logo-2.png width=175 align='right'>
+# Lexicon <img src=https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger/blob/master/Extension/Extension/design%201.0.0/logo-green.png width=180 align='right'>
 
 <p>
 Lexicon is a browser extension for automatically generating tags for your online blog, article or post.
