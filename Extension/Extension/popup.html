@@ -25,7 +25,7 @@
             margin-right: 5%;
         }
         .post-test{
-            background: #F79552;
+            background: rgb(0,174,124);
             color: white;
             font-weight: light;
             font-size: 20px;
@@ -33,7 +33,7 @@
             padding: 10px 35px;
             border-radius: 17.5px;
             box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.35);
-            transition: transform .1s;         
+            transition: transform .1s;            
         }
         .post-test:hover{
             transform: scale(1.035);
@@ -46,8 +46,21 @@
         }
         .btn{
             text-align: center;
+            margin-top: 30px;
+            user-select: none;      
+        }
+        .shadow-line {
+            z-index: -1;
+            -webkit-box-shadow: 6px 6px -6px #222;
+            -moz-box-shadow: 6px 6px -6px #222;
+            box-shadow: 0px 6px 10px -5px #222;
+            color: transparent;
+            margin-top: -33px;
+        }
+        .lorem-ipsum {
+            text-align: center;
             margin: 30px;
-            user-select: none;
+            margin-bottom: 10px;
         }
         .taghead{
             text-align: center;
@@ -121,7 +134,7 @@
 <body>
     <div class="logo-icon" >
         <div>
-            <img src="logo-2.png" class="icon" alt="">
+            <img src="design 1.0.0/logo-green.png" class="icon" alt="">
         </div>
         <div style='margin-top: 17.5px; transform: scale(0.90, 1);'>
             <span class="lex">LEXICON</span><br>
@@ -131,7 +144,13 @@
 
     <div class="btn" id='btn'>
         <button id='post-test' class="post-test">Tag</button>
+        <div class="shadow-line" id="shadow-line"> y</div>
     </div>
+
+    <div class="lorem-ipsum"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. </p>
+    </div>
+
 
     <div class="taghead" id="tag">
         <div class='recTagHead'> 
