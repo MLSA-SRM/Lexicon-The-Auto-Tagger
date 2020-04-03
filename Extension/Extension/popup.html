@@ -46,7 +46,7 @@
         }
         .btn{
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
             user-select: none;      
         }
         .shadow-line {
@@ -68,8 +68,11 @@
             display: none;
             transition: transform .1s;
             overflow-y: scroll;
+            margin-top: 20px;
+            margin-bottom: 40px;
         }
         .recTagHead{
+
             transform: scale(0.88, 1);
             margin-top: 20px;
             margin-bottom: 20px;
@@ -86,6 +89,15 @@
             box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
             transition: transform .1s;
         }
+
+        .green{
+            background: url(green.png);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            
+            
+        
+        }
         .tagStyle:hover{
             transform: scale(1.1); 
         }
@@ -93,15 +105,17 @@
         #incTags{
             align-items: center;
             padding: 20px;
+            margin-top: 10px;
         }
         .loader {
             border: 2.5px solid #e6e6e6;
-            border-top: 2.5px solid #F79552; 
+            border-top: 2.5px solid #03a87d; 
             border-radius: 50%;
             width: 40px;
             height: 40px;
             animation: spin 0.5s linear infinite;
             margin-left: 137.5px;
+            margin-top: 70px;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -147,15 +161,14 @@
         <div class="shadow-line" id="shadow-line"> y</div>
     </div>
 
-    <div class="lorem-ipsum"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    <div class="lorem-ipsum" id="instructions"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. </p>
     </div>
 
 
     <div class="taghead" id="tag">
-        <div class='recTagHead'> 
-            <span style='font-size: 20px;'>Recommended Tags</span> 
-        </div>
+        <button class="post-test">Recommended Tags</button>
+        <div class="shadow-line" id="shadow-line"> y</div>
         <div class="loader" id="loader"></div> 
         <div id="incTags"></div>
     </div>
