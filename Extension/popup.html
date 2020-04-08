@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Lexicon</title>
+    <style>
+        html,body{
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            min-height: 180px;
+            padding-bottom: 10px;
+            width: 325px;
+            max-height: 350px;
+        }        
+        .logo{
+            padding: 16px;
+            text-align: center;
+        }
+        .logo-icon{
+            display: flex;
+            margin-top: 7.5%;
+            margin-left: 7.5%;
+            margin-right: 5%;
+        }
+        .post-test{
+            background: rgb(0,174,124);
+            color: white;
+            font-weight: light;
+            font-size: 20px;
+            border: 0px;
+            padding: 10px 35px;
+            border-radius: 17.5px;
+            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.35);
+            transition: transform .1s;            
+        }
+        .post-test:hover{
+            transform: scale(1.035);
+        }
+        .post-test:active{
+            transform: scale(0.965);
+        }
+        .post-test:focus{
+            outline: none;
+        }
+        .btn{
+            text-align: center;
+            margin-top: 20px;
+            user-select: none;      
+        }
+        .shadow-line {
+            z-index: -1;
+            -webkit-box-shadow: 6px 6px -6px #222;
+            -moz-box-shadow: 6px 6px -6px #222;
+            box-shadow: 0px 6px 10px -5px #222;
+            color: transparent;
+            margin-top: -33px;
+        }
+        .lorem-ipsum {
+            text-align: center;
+            margin: 30px;
+            margin-bottom: 10px;
+        }
+        .taghead{
+            text-align: center;
+            color: #707070;
+            display: none;
+            transition: transform .1s;
+            overflow-y: scroll;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .recTagHead{
+
+            transform: scale(0.88, 1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .tagStyle{
+            float: left;
+            color: #707070;
+            margin: 5px;
+            background-color: #EBEBEB;
+            font-size: 20px;
+            border: 0px;
+            padding: 7.5px 18px;
+            border-radius: 12.5px;
+            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+            transition: transform .1s;
+        }
+
+        .green{
+            background: url(green.png);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            
+            
+        
+        }
+        .tagStyle:hover{
+            transform: scale(1.1); 
+        }
+
+        #incTags{
+            align-items: center;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        .loader {
+            border: 2.5px solid #e6e6e6;
+            border-top: 2.5px solid #03a87d; 
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 0.5s linear infinite;
+            margin-left: 137.5px;
+            margin-top: 70px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .lex{
+            font-weight: bold;
+            color: #5A5B5D;
+            letter-spacing: 0px;
+            font-size: 40px;
+        }
+        .subtitle{
+            color: #5A5B5D;
+            letter-spacing: 0px;
+            font-weight: 400;
+            font-size: 22.5px;
+            line-height: 10px;
+        }
+        .icon{
+            width: 95px;
+            height:  95px;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="logo-icon" >
+        <div>
+            <img src="design/logo-green.png" class="icon" alt="">
+        </div>
+        <div style='margin-top: 17.5px; transform: scale(0.90, 1);'>
+            <span class="lex">LEXICON</span><br>
+            <span class="subtitle">The Auto Tagger</span>
+        </div>  
+    </div>
+
+    <div class="btn" id='btn'>
+        <button id='post-test' class="post-test">Tag</button>
+        <div class="shadow-line" id="shadow-line"> y</div>
+    </div>
+
+    <div class="lorem-ipsum" id="instructions"><p> Done writing? Click on tag to see our suggestions and how strongly we suggest them. </p>
+    </div>
+
+
+    <div class="taghead" id="tag">
+        <button class="post-test">Recommended Tags</button>
+        <div class="shadow-line" id="shadow-line"> y</div>
+        <div class="loader" id="loader"></div> 
+        <div id="incTags"></div>
+    </div>
+
+</body>
+    <script src="popup.js"></script> 
+</html>
