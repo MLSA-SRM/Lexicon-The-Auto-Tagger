@@ -41,7 +41,7 @@ def returnTagsForArticleSent():
     
     # return_text_tags
     tags = model_pred.text_return_tags(_article, _title)
-    print(tags)
+    #print(tags)
 
     # respond with status 200 OK | tags as JSON
     response = jsonify({"message":"OK", "status":200, "tags":tags})

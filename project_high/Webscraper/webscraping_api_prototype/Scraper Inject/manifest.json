@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Lexicon",
+    "description": "Tag generator for blog editors.",
+    "version": "1.0.0",
+    "icons": {"128": "icon_128.png"},
+    "browser_action": {
+        "default_icon": "icon_128.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+      "activeTab",
+      "http://localhost/*",
+      "http://127.0.0.1:5000/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": [
+          "popup.js"
+        ]
+      }
+    ]
+}

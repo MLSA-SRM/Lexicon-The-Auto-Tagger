@@ -14,6 +14,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score
 from sklearn.metrics import accuracy_score
+import json
 
 _debug = True
 
@@ -73,6 +74,9 @@ prepd_db.drop(['Text'], axis=1, inplace=True)
 
 prepd_db.columns = cols
 prepd_db.drop([''], axis=1, inplace=True)
+df_list = pd.DataFrame(columns=['global_taglist'])
+df_list['global_taglist'] = cols
+df_list.to_csv('global_taglist.csv')
 
 def remove_stopwords(text):
     stop_words = set(stopwords.words('english'))
@@ -95,7 +99,7 @@ model_final_data['ID'] = range(0, model_final_data.shape[0])
 article_id_db = model_final_data[['Text', 'ID']]
 
 model_final_data.to_csv('model-data.csv')
-article_id_db.to_csv('article-data.csv')
+#article_id_db.to_csv('article-data.csv')
 
 debug('Training Corpora Transform..')
 tfidf_vectorizer = TfidfVectorizer(max_df=0.8, max_features=1000)
