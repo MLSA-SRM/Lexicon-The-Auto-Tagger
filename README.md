@@ -6,36 +6,56 @@ Lexicon is a browser extension for automatically generating tags for your online
 This is for blog writers who want to focus on their content and skip the worry about what tags they have to brand their articles with.
 </p>
 
----
-### Support:
+## Built With:
+| Software | Version |
+|----------|---------|
+| Python 3 | 3.7.1 |
+| Microsoft Chromium Edge | Beta-81.0.416.34 |
+
+## Support
+| Software | Tested with |
+|----------|-------------|
+| Google Chrome Browser | 80.0.3987.149 |
+| Microsoft Chromium Edge | Beta-81.0.416.34 |
+| Website | Medium.com |
+
+## Installing (Microsoft Store)
+* Lexicon - The Auto Tagger is now available as a Microsoft Edge Add-on. You can download it [here](https://microsoftedge.microsoft.com/addons/detail/lexicon/bppdjidlkfinpadjbmgjlfgklojbblen)
+
+## Usage
 <ul>
-<li>Browsers Tested
- <ul>
-  <li>Google Chrome Browser (Tested on 80.0.3987.149)</li>
-  <li>Microsoft Chromium Edge (Tested on Beta-81.0.416.34)</li>
- </ul>
-</li>
-<li>Sites Tested
- <ul>
-  <li>Medium.com</li>
- </ul>
-</li>
+<li>On the editor page of your chosen blog site (see Support for tested blog sites)</li>
+<li>Click on the extension's launcher on the toolbar of your browser.</li>
+<li>Click on Tag.</li>
 </ul>
 
----
-### Installing the Extension:
-***Currently in development, installation requires extension to be loaded in developer mode***
+## Building from Source Code
+* Clone this repository
+```
+git clone https://https://github.com/MLSA-SRM/Lexicon-The-Auto-Tagger
+```
+* Go to the model's root folder
+```
+cd project_high/model
+```
+* Install dependencies
+```
+pip install requirements.txt
+```
+* Run `app.py` as a Flask App
+* Lastly, install the extension as mentioned in the following section.
 
-Clone this repository to your local machine using or simple download.
+## Installing (from source code)
 
-	git clone https://https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger
-
-<br>
+* Clone this repository to your local machine (not needed if cloned during previous section).
+```
+git clone https://https://github.com/MLSA-SRM/Lexicon-The-Auto-Tagger
+```
 <ul>
  <li>Enable Developer Mode in your browser (see Support for tested Browsers)
   <ul><br>
    <li>chrome://extensions for Google Chrome</li>
-   <li>edge://extensions for Chromium Edge</li><br>
+   <li>edge://extensions for Chromium Edge</li>
   </ul>
  </li>
  
@@ -52,13 +72,7 @@ Clone this repository to your local machine using or simple download.
  </li>
 </ul>
 
----
-### Usage
-<ul>
-<li>On the editor page of your chosen blog site (see Support for tested blog sites)</li><br>
-<li>Click on the extension's launcher on the toolbar of your browser.</li><br>
-<li>Click on Tag.</li>
-</ul>
-
----
+## More Info
 ***For further reading, please see <a href='https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger/wiki'>Wiki</a>.***
+<br>
+To contact us regarding this, or more projects - you can find us at [Microsoft Learn Student Ambassadors SRM](https://msclubsrm.in).
