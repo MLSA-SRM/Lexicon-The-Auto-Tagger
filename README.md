@@ -1,10 +1,11 @@
 # Lexicon <img src=https://github.com/MSPC-Tech/Lexicon-The-Auto-Tagger/blob/master/Extension/design/logo-green.png width=180 align='right'>
 
-<p>
-Lexicon is a browser extension for automatically generating tags for your online blog, article or post.
 
+Lexicon is a browser extension, for automatically generating tags for your online blog, article or post.
 This is for blog writers who want to focus on their content and skip the worry about what tags they have to brand their articles with.
-</p>
+<br><br>
+Brought to you by the Tech Team at [Microsoft Learn Student Ambassadors SRM](https://msclubsrm.in).
+
 
 ## Built With:
 | Software | Version |
