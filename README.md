@@ -63,7 +63,7 @@ git clone https://https://github.com/MLSA-SRM/Lexicon-The-Auto-Tagger
  </li>
  
  ![](https://i.ibb.co/KGb8D1w/dev-mode.png)
- <li>Use "Load Unpacked" and select folder "~/Project-High/Extension/Extension".
+ <li>Use "Load Unpacked" and select the folder "~/Project-High/Extension/Extension".
  
  ![](https://i.ibb.co/sRDYTQC/load-unpacked.png)
 
