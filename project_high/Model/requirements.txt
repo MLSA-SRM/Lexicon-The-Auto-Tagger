@@ -1,5 +1,5 @@
 Flask==1.1.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 joblib==0.14.1
 nltk==3.4.5
 numpy==1.18.1
